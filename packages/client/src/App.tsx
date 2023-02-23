@@ -25,6 +25,8 @@ function App() {
   const formRef = useRef() as React.MutableRefObject<HTMLFormElement>;
   const baseURL = `${process.env.REACT_APP_BASE_URL}/api/books`;
 
+  console.log(baseURL);
+
   const customStyles = {
     content: {
       top: "50%",
@@ -96,7 +98,7 @@ function App() {
           {/* <button>view more</button> */}
         </section>
         <section className="callToAction">
-          <p>Want to support the next gen of leaders with books and educational resources?</p>
+          <p>Want to support the next gen of leaders with books?</p>
           <button onClick={openModal}>Donate</button>
         </section>
       </main>
