@@ -23,7 +23,7 @@ function App() {
   });
   const [bookList, setBookList] = useState<bookType | null>(null);
   const formRef = useRef() as React.MutableRefObject<HTMLFormElement>;
-  const baseURL = "http://localhost:2020/api/books";
+  const baseURL = `${process.env.REACT_APP_BASE_URL}/api/books`;
 
   const customStyles = {
     content: {
