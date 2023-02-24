@@ -25,7 +25,7 @@ function App() {
   const formRef = useRef() as React.MutableRefObject<HTMLFormElement>;
   const baseURL = `${process.env.REACT_APP_BASE_URL}/api/books`;
 
-  console.log(baseURL);
+  console.log(process.env.REACT_APP_BASE_URL);
 
   const customStyles = {
     content: {
