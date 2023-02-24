@@ -23,7 +23,7 @@ function App() {
   });
   const [bookList, setBookList] = useState<bookType | null>(null);
   const formRef = useRef() as React.MutableRefObject<HTMLFormElement>;
-  const baseURL = `${import.meta.env.VITE_REACT_APP_BASE_URL}/api/books`;
+  const baseURL = `${import.meta\u200b.env.VITE_REACT_APP_BASE_URL}/api/books`;
 
   console.log(import.meta.env.VITE_REACT_APP_BASE_URL);
 
