@@ -98,7 +98,7 @@ function App() {
           {/* <button>view more</button> */}
         </section>
         <section className="callToAction">
-          <p>Want to support the next gen of leaders with books?</p>
+          <p>Want to support the next gen of leaders with books and resources?</p>
           <button onClick={openModal}>Donate</button>
         </section>
       </main>
