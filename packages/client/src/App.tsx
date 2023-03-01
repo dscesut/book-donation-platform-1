@@ -5,7 +5,7 @@ import happyPride from "./assets/Happy Pride! - Donut.png";
 import peepsTogether from "./assets/open-peeps-together.png";
 import streetLife from "./assets/Street Life - Couple of Friends.png";
 import { BookList } from "./components/BookList";
-import { config } from "../baseConfig.ts";
+import { config } from "../baseConfig";
 import Modal from "react-modal";
 import axios from "axios";
 
