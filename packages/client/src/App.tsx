@@ -5,6 +5,7 @@ import happyPride from "./assets/Happy Pride! - Donut.png";
 import peepsTogether from "./assets/open-peeps-together.png";
 import streetLife from "./assets/Street Life - Couple of Friends.png";
 import { BookList } from "./components/BookList";
+import { config } from "../baseConfig";
 import Modal from "react-modal";
 import axios from "axios";
 
@@ -23,7 +24,8 @@ function App() {
   });
   const [bookList, setBookList] = useState<bookType | null>(null);
   const formRef = useRef() as React.MutableRefObject<HTMLFormElement>;
-  const baseURL = `${process.env.REACT_APP_BASE_URL}/api/books`;
+  const base = config.baseUrl || "http://localhost:8080";
+  const baseURL = `${base}/api/books`;
 
   console.log(baseURL);
 
@@ -85,7 +87,7 @@ function App() {
         <section>
           <p>Recently donated:</p>
           <div className="grid">
-            {bookList?.data.length === 0 && <p>No books found in the library.</p>}
+            {bookList?.data.length === 0 && <p>No books found in the libraryyy.</p>}
             {bookList?.data.map((book: { [x: string]: string }) => (
               <BookList
                 key={book["_id"]}
@@ -98,7 +100,7 @@ function App() {
           {/* <button>view more</button> */}
         </section>
         <section className="callToAction">
-          <p>Want to support the next gen of leaders with books?</p>
+          <p>Want to support the next gen of leaders with books and resources?</p>
           <button onClick={openModal}>Donate</button>
         </section>
       </main>
